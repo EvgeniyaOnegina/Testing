@@ -1,4 +1,68 @@
-123456
+{
+"type": "object",
+"properties": {
+"name": {"type": "string", "enum": [Vova]},
+"email": {"type": "string"},
+"age": {'type": "integer", "enum": [35]}
+},
+"required": ["name", "age"]
+}
 
 
-56789
+{
+"type": "object",
+"propeties": {
+"name": {"type": "string"},
+"age": {"type": "integer"},
+"havePets": {"type": "boolean"},
+"petsName": {"type": "array", "items": {"type": "string"}},
+"oneOfPets": {"type": "object", 
+"properties": {
+"PetsName": {"type": "string"},
+"petsAge": {"type": "integer"},
+"petsType": {"type": "string"}},
+"require": [PetsName", "PetsAge", "PetsType"]},
+"haveCar": {"type": ["null", "string"]}
+},
+"required": ["name", "age", "havePets", "petsName", oneOfPets"]
+}
+
+{
+"type": "object",
+"properties": {
+"name": {"type": "string", "enum": [Vova, Max]},
+"email": {"type": "string"},
+"age": {"type": "integer"},
+"haveCar": {"type": "boolean"},
+"car": {"type": "object",
+"properties": {
+"marka": {"type": "string"},
+"carAge": {"type": "integer"},
+"countryDestributor": {"type": "string"}
+},
+"required": ["marka", "carAge"]
+},
+"petsName": {"type": "array", "items": {"type": "string}}
+},
+"required": ["name", "email", "age"]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
