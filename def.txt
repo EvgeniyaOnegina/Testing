@@ -1,0 +1,18 @@
+
+{
+"type": "object",
+"propeties": {
+"name": {"type": "string"},
+"age": {"type": "integer"},
+"havePets": {"type": "boolean"},
+"petsName": {"type": "array", "items": {"type": "string"}},
+"oneOfPets": {"type": "object", 
+"properties": {
+"PetsName": {"type": "string"},
+"petsAge": {"type": "integer"},
+"petsType": {"type": "string"}},
+"require": [PetsName", "PetsAge", "PetsType"]},
+"haveCar": {"type": ["null", "string"]}
+},
+"required": ["name", "age", "havePets", "petsName", oneOfPets"]
+}
